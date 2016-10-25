@@ -44,4 +44,9 @@ node default {
   #   class { 'my_class': }
   include role::classroom
   notify { 'This is my new code': }
+  
+  class motd {
+    content => 'This is my new content for MOTD, have a great day'
+    owner   => 'root'
+  }
 }
