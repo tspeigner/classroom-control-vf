@@ -43,5 +43,6 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  include memcached  
+  include memcached
+  include nginx
 }
