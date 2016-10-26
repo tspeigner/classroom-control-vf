@@ -1,2 +1,7 @@
-# calling the useres manifest.
-include users
+#declare users class
+
+class users {
+  user { 'fundamentals':
+    ensure => present,
+  }
+}
