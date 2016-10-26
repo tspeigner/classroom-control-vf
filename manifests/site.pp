@@ -38,24 +38,11 @@ ini_setting { 'random ordering':
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-node 'tspeigner.puppetlabs.vm' {
-  notify { "This is tspeigner node definition": }
- }
 
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
   include role::classroom
-  notify { 'This is my new code': }
-
-  exec { "motd exec": 
-    creates => '/etc/motd',
-    command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-    path    => ['/usr/local/bin','/usr/bin','/bin'],
-    }
-  
-  include users
-  include skeleton
 
 }
