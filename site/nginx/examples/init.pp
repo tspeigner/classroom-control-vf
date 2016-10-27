@@ -13,7 +13,7 @@ class nginx {
     group   => 'root',
     source  => 'puppet:///modules/nginx/default.conf',
     require => Package['nginx']
-    notify  => Service['nginx']
+    #notify  => Service['nginx']
   }
   
     file { '/etc/nginx/nginx.conf':
