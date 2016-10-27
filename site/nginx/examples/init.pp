@@ -40,7 +40,7 @@ class nginx {
       group   => 'root',
       source  => 'puppet:///modules/nginx/index.html',
       require => Package['nginx']
-      notify  => Service['nginx']
+      #notify  => Service['nginx']
       }
     
   service { 'nginx':
