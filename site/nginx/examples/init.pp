@@ -23,13 +23,13 @@ class nginx {
       group   => 'root',
       source  => 'puppet:///modules/nginx/nginx.conf',
       require => Package['nginx']
-      notify  => Service['nginx']
+      #notify  => Service['nginx']
     }
   
     file { '/var/www':
       ensure  => directory,
       require => Package['nginx']
-      notify  => Service['nginx']
+      #notify  => Service['nginx']
     }
 
     
