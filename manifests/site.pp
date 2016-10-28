@@ -45,5 +45,7 @@ node default {
   #   class { 'my_class': }
 
   #notify ['$::message'],
+  $msg = hiera('message;)
+  notify { $msg: }
 
 }
