@@ -2,7 +2,7 @@
 
 class users::admins { 
 
-  users::admins ['jose','alice','tommy']
+  #users::admins ['jose','alice','tommy']
 
 }
   
